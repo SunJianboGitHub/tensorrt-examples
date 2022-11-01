@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/datav/lean/cuda-11.2/include/**",
+                "/datav/lean/cudnn8.2.2.26/include/**",
+                "/datav/lean/opencv-4.2.0/include/opencv4/**",
+                "/datav/lean/TensorRT-8.0.3.4.cuda11.3.cudnn8.2/include/**",
+                "src/**",
+                "src/tensorRT/**",
+                "src/lessons/**",
+                "src/tensorRT/onnx/**",
+                "src/tensorRT/common/**",
+                "src/tensorRT/builder/**",
+                "/datav/lean/protobuf3.11.4/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

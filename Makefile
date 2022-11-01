@@ -26,6 +26,7 @@ include_paths := /datav/lean/protobuf3.11.4/include \
 				 /datav/lean/TensorRT-8.0.3.4.cuda11.3.cudnn8.2/include \
 				 src \
 				 src/tensorRT \
+				 src/lessons \
                  src/tensorRT/onnx \
 				 src/tensorRT/common
 				 
