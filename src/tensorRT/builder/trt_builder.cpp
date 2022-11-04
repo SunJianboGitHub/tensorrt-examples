@@ -486,7 +486,14 @@ namespace TRT {
 			if (!builder->platformHasFastInt8()) {
 				INFOW("Platform not have fast int8 support");
 			}
+
+			// 这里设置两个，好像可以实现混合精度，那个快选择那个
+			// 具体结论有待检验，速度确实快于fp16
+			// 为什么这里要设置混合精度？是因为v100上int8慢于fp16
+			config->setFlag(BuilderFlag::kFP16);					// 我手动添加的，用于测试
 			config->setFlag(BuilderFlag::kINT8);
+			// config->setFlag(BuilderFlag::kFP16);					// 我手动添加的，用于测试
+			// config->setFlag(BuilderFlag::kSTRICT_TYPES);			// 限制约束数据类型,设置会降低速度
 		}
 
 		shared_ptr<INetworkDefinition> network;
